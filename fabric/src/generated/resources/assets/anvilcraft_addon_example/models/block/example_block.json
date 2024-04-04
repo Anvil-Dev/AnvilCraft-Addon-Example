@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "anvilcraft_addon_example:block/example_block"
+  }
+}

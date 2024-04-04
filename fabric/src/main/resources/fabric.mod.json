@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [],
+  "contact": {},
+
+  "license": "${mod_license}",
+  "icon": "assets/anvilcraft_addon_example/textures/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.anvilcraft.addon.fabric.ExampleModFabric"
+    ],
+    "fabric-datagen": [
+      "dev.anvilcraft.addon.data.fabric.ExampleModDatagen"
+    ]
+  },
+  "mixins": [
+    "anvilcraft_addon_example.mixins.json",
+    "anvilcraft_addon_example-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.7",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "anvilcraft": ">=1.1"
+  }
+}

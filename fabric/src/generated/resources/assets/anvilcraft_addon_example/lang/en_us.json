@@ -1,0 +1,5 @@
+{
+  "block.anvilcraft_addon_example.example_block": "Example Block",
+  "item.anvilcraft_addon_example.example_item": "Example Item",
+  "itemGroup.anvilcraft_addon_example.example_tab": "Example Tab"
+}

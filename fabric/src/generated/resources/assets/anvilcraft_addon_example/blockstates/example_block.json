@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "anvilcraft_addon_example:block/example_block"
+    }
+  }
+}
