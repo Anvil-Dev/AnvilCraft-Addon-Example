@@ -13,7 +13,8 @@ loom {
 }
 
 repositories {
-    maven { url = "https://mvn.devos.one/snapshots/" } // Create Fabric, Porting Lib, Forge Tags, Milk Lib, Registrate Fabric
+    maven { url = "https://mvn.devos.one/snapshots/" }
+    // Create Fabric, Porting Lib, Forge Tags, Milk Lib, Registrate Fabric
     //maven { url = "https://maven.cafeteria.dev/releases" } // Fake Player API
     maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
     maven { url = "https://jitpack.io/" } // Mixin Extras, Fabric ASM
@@ -60,11 +61,14 @@ dependencies {
     // Mixin Extras
     implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${fabric.versions.mixinextras.get()}"))
 
-    // Configuration
-    modCompileOnly fabric.configuration
+    // cloth config api
+    modCompileOnly(fabric.clothConfig)
+
+    // AnvilLib
+    modCompileOnly(fabric.anvilLib) { transitive = false }
 
     // AnvilCraft
-    modImplementation fabric.anvilcraft
+    modCompileOnly(fabric.anvilcraft) { transitive = false }
 }
 
 publishing {

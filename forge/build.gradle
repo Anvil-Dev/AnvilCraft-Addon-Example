@@ -145,12 +145,16 @@ dependencies {
     implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${this.forge.versions.mixinextras.get()}"))
     implementation(include("io.github.llamalad7:mixinextras-forge:${this.forge.versions.mixinextras.get()}"))
 
-    // Configuration
-    modImplementation(forge.configuration)
-    include(forge.configuration)
+    // cloth config api
+    modImplementation(fabric.clothConfig)
+    include(fabric.clothConfig)
+
+    // AnvilLib
+    modImplementation(forge.anvilLib) { transitive = false }
+    include(forge.anvilLib)
 
     // AnvilCraft
-    modImplementation(forge.anvilcraft)
+    modImplementation(forge.anvilcraft) { transitive = false }
 }
 
 processResources {
